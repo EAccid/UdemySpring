@@ -7,12 +7,24 @@
 
     <bean id="person"
           class="com.eaccid.spring.test.udemy.Person"
-          scope="singleton"
           init-method="onCreate"
-          destroy-method="onDestroy">
-
+          destroy-method="onDestroy"
+          factory-method="getInstance">
         <constructor-arg index="0" value="777" type="int"/>
         <constructor-arg index="1" value="Mary" type="java.lang.String"/>
+        <property name="taxId" value="321"/>
+        <property name="address" ref="address"/>
+    </bean>
+
+    <bean id="person2"
+          init-method="onCreate"
+          destroy-method="onDestroy"
+    factory-bean="personfactory"
+    factory-method="createPerson">
+
+        <constructor-arg index="0" value="654" type="int"/>
+        <constructor-arg index="1" value="Mike" type="java.lang.String"/>
+
         <property name="taxId" value="321"/>
         <property name="address" ref="address"/>
     </bean>
@@ -22,5 +34,7 @@
         <constructor-arg index="0" value="1 Church Lane"/>
         <constructor-arg index="1" value="9876"/>
     </bean>
-
+    <bean id="personfactory"
+          class="com.eaccid.spring.test.udemy.PersonFactory">
+    </bean>
 </beans>
