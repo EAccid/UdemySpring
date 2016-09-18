@@ -9,17 +9,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
 
-//        ApplicationContext context = new FileSystemXmlApplicationContext("com.eaccid.spring.test.udemy.beans.xml");
-//        Person person = (Person) context.getBean("person");
-//        person.speak();
-//        ((FileSystemXmlApplicationContext) context).close();
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml"); //new FileSystemXmlApplicationContext("com.eaccid.spring.test.udemy.beans.xml");
 
-        //src/main/java/com/eaccid/spring/test/udemy/beans/beans.xml"
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Person person = (Person) context.getBean("person");
         person.speak();
-
         System.out.println(person);
+
+        Address address = (Address) context.getBean("address");
+        System.out.println(address);
+
 
         ((ClassPathXmlApplicationContext) context).close();
 

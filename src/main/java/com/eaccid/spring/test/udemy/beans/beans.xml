@@ -3,10 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
-    <bean id="person"
-            class="com.eaccid.spring.test.udemy.Person">
+    <bean id="person" class="com.eaccid.spring.test.udemy.Person">
+
         <constructor-arg index="0" value="777" type="int"/>
         <constructor-arg index="1" value="Mary" type="java.lang.String"/>
+        <property name="taxId" value="321"/>
+        <property name="address" ref="address"/>
     </bean>
 
+    <bean id="address" class="com.eaccid.spring.test.udemy.Address">
+
+        <constructor-arg index="0" value="1 Church Lane"/>
+        <constructor-arg index="1" value="9876"/>
+    </bean>
 </beans>
