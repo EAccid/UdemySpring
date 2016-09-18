@@ -36,7 +36,7 @@
         <constructor-arg index="1" value="9876"/>
     </bean>
 
-    <bean id="addres2" class="com.eaccid.spring.test.udemy.Address" p:street="23 Vinyard Lane" p:postcode="6789">
+    <bean id="address2" class="com.eaccid.spring.test.udemy.Address" p:street="23 Vinyard Lane" p:postcode="6789">
 
     </bean>
 
