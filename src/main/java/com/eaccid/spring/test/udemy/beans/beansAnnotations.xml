@@ -6,10 +6,6 @@
     <bean id="logger" class="com.eaccid.spring.test.udemy.Logger">
     </bean>
 
-    <bean id="consoleWriter"
-          class="com.eaccid.spring.test.udemy.ConsoleWriter">
-    </bean>
-
     <bean id="fileWriter"
           class="com.eaccid.spring.test.udemy.FileWriter">
     </bean>
