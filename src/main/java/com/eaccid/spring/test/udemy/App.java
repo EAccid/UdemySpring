@@ -9,14 +9,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("beansAnnotations.xml");
 
-        Person person = (Person) context.getBean("person");
-        person.setTaxId(666);
-        System.out.println(person);
+        Logger logger = (Logger)context.getBean("logger");
 
-        Address address2 = (Address) context.getBean("address2");
-        System.out.println(address2);
+        logger.writeConsole("Hello there");
+        logger.writeFile("Hi again");
 
         ((ClassPathXmlApplicationContext) context).close();
 

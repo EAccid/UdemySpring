@@ -9,8 +9,9 @@
     <bean id="person"
           class="com.eaccid.spring.test.udemy.Person"
           init-method="onCreate"
-          destroy-method="onDestroy"
-          factory-method="getInstance">
+          destroy-method="onDestroy">
+          <!--factory-method="getInstance"-->
+
         <constructor-arg index="0" value="777" type="int"/>
         <constructor-arg index="1" value="Mary" type="java.lang.String"/>
         <property name="taxId" value="321"/>
@@ -20,8 +21,9 @@
     <bean id="person2"
           init-method="onCreate"
           destroy-method="onDestroy"
-    factory-bean="personfactory"
-    factory-method="createPerson">
+    >
+        <!--factory-bean="personfactory"-->
+        <!--factory-method="createPerson"-->
 
         <constructor-arg index="0" value="654" type="int"/>
         <constructor-arg index="1" value="Mike" type="java.lang.String"/>
