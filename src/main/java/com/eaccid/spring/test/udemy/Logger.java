@@ -1,22 +1,18 @@
 package com.eaccid.spring.test.udemy;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import javax.annotation.Resource;
 
 public class Logger {
 
     private ConsoleWriter consoleWriter;
     private LogWriter fileWriter;
 
-    @Autowired
-    @Qualifier("toconsole")
+    @Resource
     public void setConsoleWriter(ConsoleWriter consoleWriter) {
         this.consoleWriter = consoleWriter;
     }
-
-    @Autowired
-    @Qualifier("filewriter")
-    public void setFileWriter(FileWriter fileWriter) {
+    @Resource(name = "squirrel")
+    public void setFileWriter(LogWriter fileWriter) {
         this.fileWriter = fileWriter;
     }
 
