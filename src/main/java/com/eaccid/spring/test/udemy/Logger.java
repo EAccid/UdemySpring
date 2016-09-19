@@ -1,5 +1,7 @@
 package com.eaccid.spring.test.udemy;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
 public class Logger {
@@ -11,6 +13,7 @@ public class Logger {
     public void setConsoleWriter(ConsoleWriter consoleWriter) {
         this.consoleWriter = consoleWriter;
     }
+
     @Resource(name = "squirrel")
     public void setFileWriter(LogWriter fileWriter) {
         this.fileWriter = fileWriter;
@@ -23,6 +26,16 @@ public class Logger {
     public void writeConsole(String text) {
         if (consoleWriter != null)
             consoleWriter.write(text);
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("init");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("destroy");
     }
 
 }
