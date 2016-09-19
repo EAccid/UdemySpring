@@ -1,18 +1,21 @@
 package com.eaccid.spring.test.udemy;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Logger {
 
     private ConsoleWriter consoleWriter;
-    private FileWriter fileWriter;
+    private LogWriter fileWriter;
 
-    @Autowired(required = false)
+    @Autowired
+    @Qualifier("toconsole")
     public void setConsoleWriter(ConsoleWriter consoleWriter) {
         this.consoleWriter = consoleWriter;
     }
 
     @Autowired
+    @Qualifier("filewriter")
     public void setFileWriter(FileWriter fileWriter) {
         this.fileWriter = fileWriter;
     }
