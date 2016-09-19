@@ -1,8 +1,8 @@
 package com.eaccid.spring.test.udemy;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
-@Qualifier("filewriter")
+@Component
 public class FileWriter implements LogWriter {
     public void write(String text) {
         // Write to a file here.

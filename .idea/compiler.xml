@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="HelloSpring" />
+        <module name="UdemySpring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="HelloSpring" target="1.5" />
+      <module name="UdemySpring" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,20 +1,23 @@
 package com.eaccid.spring.test.udemy;
 
+import org.springframework.stereotype.Component;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.annotation.Resource;
+import javax.inject.Inject;
 
+@Component
 public class Logger {
 
     private ConsoleWriter consoleWriter;
     private LogWriter fileWriter;
 
-    @Resource
+    @Inject
     public void setConsoleWriter(ConsoleWriter consoleWriter) {
         this.consoleWriter = consoleWriter;
     }
 
-    @Resource(name = "squirrel")
+    @Inject
     public void setFileWriter(LogWriter fileWriter) {
         this.fileWriter = fileWriter;
     }

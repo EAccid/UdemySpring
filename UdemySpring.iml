@@ -3,12 +3,13 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration process_explicitly_annotated="false">
-        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/com/eaccid/spring/test/udemy/beans/beans.xml</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/eaccid/spring/test/udemy/beans/beansAnnotations.xml</file>
-        </fileset>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <dependency>fileset2</dependency>
+          <file>file://$MODULE_DIR$/src/main/java/com/eaccid/spring/test/udemy/beans/beansAnnotations.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/eaccid/spring/test/udemy/beans/beansAnnotations.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/eaccid/spring/test/udemy/beans/beansBasic.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -69,5 +70,6 @@
     <orderEntry type="library" name="Maven: org.apache.sling:org.apache.sling.api:2.0.2-incubator" level="project" />
     <orderEntry type="library" name="Maven: org.apache.felix:org.apache.felix.webconsole:1.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
   </component>
 </module>
