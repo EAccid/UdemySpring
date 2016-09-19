@@ -1,13 +1,18 @@
 package com.eaccid.spring.test.udemy;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Logger {
+
     private ConsoleWriter consoleWriter;
     private FileWriter fileWriter;
 
-    public void setConsoleWriter(ConsoleWriter writer) {
-        this.consoleWriter = writer;
+    @Autowired(required = false)
+    public void setConsoleWriter(ConsoleWriter consoleWriter) {
+        this.consoleWriter = consoleWriter;
     }
 
+    @Autowired
     public void setFileWriter(FileWriter fileWriter) {
         this.fileWriter = fileWriter;
     }
@@ -17,7 +22,8 @@ public class Logger {
     }
 
     public void writeConsole(String text) {
-        consoleWriter.write(text);
+        if (consoleWriter != null)
+            consoleWriter.write(text);
     }
 
 }

@@ -18,6 +18,5 @@ public class App {
 
         ((ClassPathXmlApplicationContext) context).close();
 
-
     }
 }

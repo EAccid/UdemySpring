@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-       default-autowire="byType">
-    <bean id="logger" class="com.eaccid.spring.test.udemy.Logger">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.box-spring.org/boxspring"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.box-spring.org/boxspring http://www.box-spring.org/schema/boxspring.xsd">
 
+    <bean id="logger" class="com.eaccid.spring.test.udemy.Logger">
     </bean>
 
     <bean id="consoleWriter"
-          class="com.eaccid.spring.test.udemy.ConsoleWriter"
-          primary="true">
-    </bean>
-
-    <bean id="panda" class="com.eaccid.spring.test.udemy.ConsoleWriter">
+          class="com.eaccid.spring.test.udemy.ConsoleWriter">
     </bean>
 
     <bean id="fileWriter"
           class="com.eaccid.spring.test.udemy.FileWriter">
     </bean>
 
-    <bean id="squirrel"
-          class="com.eaccid.spring.test.udemy.FileWriter"
-          autowire-candidate="false">
-    </bean>
+    <context:annotation-config></context:annotation-config>
+
+
 </beans>
