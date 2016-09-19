@@ -6,6 +6,7 @@
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <dependency>fileset2</dependency>
           <file>file://$MODULE_DIR$/src/main/java/com/eaccid/spring/test/udemy/beans/beansAnnotations.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/eaccid/spring/test/udemy/beans/beansSPEL.xml</file>
         </fileset>
         <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/com/eaccid/spring/test/udemy/beans/beansAnnotations.xml</file>
